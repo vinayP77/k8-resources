@@ -1,0 +1,12 @@
+kind: pod
+aoiVersion: v1
+metadata:
+  name: env
+spec:
+  containers:
+   - name: course
+     value: Devops
+   - name: trainer
+     value: "vinay"
+   - name: duration
+     value: "120HRs" 
