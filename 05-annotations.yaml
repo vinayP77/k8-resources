@@ -1,5 +1,6 @@
 kind: Pod
-apiversion: v1
+#apiversion: v1
+apiVersion: v1
 metadata:
   name: annotations
 annotations:
