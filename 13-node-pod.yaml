@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: nginx-np
 spec:
-  selector:
-    type: NodePort
+  type: NodePort          # ✅ FIX 1
+  selector:               # ✅ FIX 2 (match pod labels)
     project: expense
     component: backend
     environment: dev
@@ -12,8 +12,9 @@ spec:
     demo: np
   ports:
     - protocol: TCP
-      port: 80        # service port
-      targetPort: 80  # container port
+      port: 80
+      targetPort: 80
+      nodePort: 30080     # optional
 ---
 apiVersion: v1
 kind: Pod
