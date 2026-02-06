@@ -4,7 +4,7 @@ metadata:
   name: nginx-np
 spec:
   selector:
-    type: Nodeport
+    type: NodePort
     project: expense
     component: backend
     environment: dev
