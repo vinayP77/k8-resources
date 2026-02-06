@@ -1,29 +1,30 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: nginx
 spec:
- selector: # labels  are used as selectors
-      project: expense
-      component: backend 
-      environment: dev
-      version: "1.0.0"
-ports:
- - protocol: TCP
-   PORT: 80 # service port
-   targetPort: 80 
+  selector:
+    project: expense
+    component: backend
+    environment: dev
+    version: "1.0.0"
+  ports:
+    - protocol: TCP
+      port: 80        # service port
+      targetPort: 80  # container port
 ---
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: backend
-labels:
-      project: expense
-      component: backend 
-      environment: dev
-      version: "1.0.0"
+  labels:
+    project: expense
+    component: backend
+    environment: dev
+    version: "1.0.0"
 spec:
   containers:
-  - name: nginx
-    image: nginx
-
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
