@@ -8,10 +8,10 @@ spec:
       component: backend 
       envitonment: dev
       version: "1.0.0"
- ports:
-   - protocol: TCP
-     PORT: 80 # service port
-     targetPort: 80 
+ports:
+ - protocol: TCP
+   PORT: 80 # service port
+   targetPort: 80 
 ---
 kind: Pod
 apiVersion: v1
