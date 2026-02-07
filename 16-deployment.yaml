@@ -9,8 +9,8 @@ metadata:
     purpose: deployment
 spec: 
   replicas: 3
-  selectors:
-    matchLables:
+  selector:
+    matchLabels:
        app: nginx
        tier: frontend
        purpose: deployment
@@ -21,8 +21,8 @@ spec:
         tier: frontend
         purpose: deployment
     spec:
-      container:
+      containers:
        - name: nginx
          image: nginx:1.14.2
          ports:
-          - containersPort: 80             
+          - containerPort: 80             
