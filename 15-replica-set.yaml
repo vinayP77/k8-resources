@@ -15,7 +15,7 @@ spec:
       app: frontend
       tier: web
   # pod template
-   template:
+ template:
     metadata:
      labels:
        app: frontend 
