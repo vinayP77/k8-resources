@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
        - name: nginx
-         image: vinayp77/nginx:1.0.0
+         image: vinayp77/deployment:1.0.0
          ports:
           - containerPort: 80   \
 ------
