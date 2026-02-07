@@ -9,3 +9,5 @@ spec:
      envFrom:
      - configMapRef:
         name: myconfig   
+
+#  eksctl delete cluster --config-file=ekss.yaml
