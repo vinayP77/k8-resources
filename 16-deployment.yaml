@@ -23,6 +23,23 @@ spec:
     spec:
       containers:
        - name: nginx
-         image: nginx:1.14.2
+         image: vinayp77/nginx:1.0.0
          ports:
-          - containerPort: 80             
+          - containerPort: 80   \
+------
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-lb
+spec:
+  type: LoadBalancer          # ✅ FIX 1
+  selector:               # ✅ FIX 2 (match pod labels)
+    app: nginx
+    tier: frontend
+    purpose: deployment
+  
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30080     # optional                    
