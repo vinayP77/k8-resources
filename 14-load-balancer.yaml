@@ -19,7 +19,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: backend-np
+  name: backend-lb
   labels:
     project: expense
     component: backend
