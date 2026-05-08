@@ -33,7 +33,7 @@ metadata:
   name: nginx-lb
 spec:
   type: LoadBalancer          # ✅ FIX 1
-  selector:               # ✅ FIX 2 (match pod labels)
+  selector:                   # ✅ FIX 2 (match pod labels)
     app: nginx
     tier: frontend
     purpose: deployment

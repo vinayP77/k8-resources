@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nginx
 spec:
-  selector:
+  selector:  # labels are used as selectors
     project: expense
     component: backend
     environment: dev
