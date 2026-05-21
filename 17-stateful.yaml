@@ -47,7 +47,7 @@ spec:
       name: www
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "ebs-sc"
+      storageClassName: "expense-ebs"
       resources:
         requests:
           storage: 1Gi
