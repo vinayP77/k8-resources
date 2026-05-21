@@ -30,7 +30,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-lb
+  name: nginx
 spec:
   type: LoadBalancer          # ✅ FIX 1
   selector:                   # ✅ FIX 2 (match pod labels)
